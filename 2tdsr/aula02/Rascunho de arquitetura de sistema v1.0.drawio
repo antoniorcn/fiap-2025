@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0" version="26.0.11">
+  <diagram name="Página-1" id="81F1UbtDlpMVIuJjuEPL">
+    <mxGraphModel dx="3304" dy="2084" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-17" value="Servidor Web&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AWS Servidor 001&lt;/div&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;verticalAlign=top;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="-340" y="40" width="320" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-1" value="Servidor Backend&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;AWS Servidor 002&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Spring Boot Kotlin&lt;/div&gt;&lt;div&gt;Node JS com Express&lt;/div&gt;&lt;div&gt;Python Django&lt;/div&gt;&lt;div&gt;Python Flask&lt;/div&gt;&lt;div&gt;Python Fast API&lt;/div&gt;&lt;/div&gt;" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="270" y="140" width="250" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-7" value="Front end WEB" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=18;" parent="1" vertex="1">
+          <mxGeometry x="-232" y="202" width="105" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=115.00000000000001;entryPerimeter=0;" parent="1" source="KUsmrb8lNCLkx_MoMA3p-7" target="KUsmrb8lNCLkx_MoMA3p-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="275" as="sourcePoint" />
+            <mxPoint x="810" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-9" value="HTTP&amp;nbsp; 8080 usando Requisição e Resposta com JSON ou XML" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="KUsmrb8lNCLkx_MoMA3p-8" vertex="1" connectable="0">
+          <mxGeometry x="0.15" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-254" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="KUsmrb8lNCLkx_MoMA3p-10" target="KUsmrb8lNCLkx_MoMA3p-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-100" y="265" as="sourcePoint" />
+            <mxPoint x="280" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-12" value="HTTP&amp;nbsp; 8080 usando Requisição e Resposta com JSON ou XML" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="KUsmrb8lNCLkx_MoMA3p-11" vertex="1" connectable="0">
+          <mxGeometry x="0.15" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=135;entryDy=250.00000000000003;entryPerimeter=0;" parent="1" source="KUsmrb8lNCLkx_MoMA3p-13" target="KUsmrb8lNCLkx_MoMA3p-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-100" y="40" as="sourcePoint" />
+            <mxPoint x="405" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-15" value="HTTP&amp;nbsp; 8080 usando Requisição e Resposta com JSON ou XML" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=18;" parent="KUsmrb8lNCLkx_MoMA3p-14" vertex="1" connectable="0">
+          <mxGeometry x="0.15" y="1" relative="1" as="geometry">
+            <mxPoint x="-21" y="-24" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-22" value="" style="group;fontSize=19;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-910" y="-430" width="338" height="338" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-18" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/general-9/500/iPad-128.png" parent="KUsmrb8lNCLkx_MoMA3p-22" vertex="1">
+          <mxGeometry width="338" height="338" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-10" value="Front end Mobile" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=18;" parent="KUsmrb8lNCLkx_MoMA3p-22" vertex="1">
+          <mxGeometry x="100" y="80" width="140" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-27" value="" style="group;fontSize=18;" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="-940" y="30" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-23" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/general-9/500/laptop-128.png" parent="KUsmrb8lNCLkx_MoMA3p-27" vertex="1">
+          <mxGeometry width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-26" value="Navegador Web" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" parent="KUsmrb8lNCLkx_MoMA3p-27" vertex="1">
+          <mxGeometry x="60" y="100" width="320" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="C7t1A0CUNiaQvzjGpF3V-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.996;exitY=0.562;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=185;entryPerimeter=0;" edge="1" parent="1" source="KUsmrb8lNCLkx_MoMA3p-26" target="KUsmrb8lNCLkx_MoMA3p-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-400" y="80" as="sourcePoint" />
+            <mxPoint x="-350" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C7t1A0CUNiaQvzjGpF3V-4" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="-410" y="480" width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-19" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/general-9/500/laptop-128.png" parent="C7t1A0CUNiaQvzjGpF3V-4" vertex="1">
+          <mxGeometry width="440" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="KUsmrb8lNCLkx_MoMA3p-13" value="Front end Desktop" style="whiteSpace=wrap;html=1;aspect=fixed;fontSize=18;" parent="C7t1A0CUNiaQvzjGpF3V-4" vertex="1">
+          <mxGeometry x="150" y="130" width="140" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
