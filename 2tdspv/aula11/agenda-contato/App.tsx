@@ -39,7 +39,12 @@ const Formulario = ( props : FormularioProps ) : React.ReactElement => {
         value={telefone} onChangeText={setTelefone}/>
       <TextInput style={styles.input} placeholder="Email"
         value={email} onChangeText={setEmail}/>
-      <Button title="Salvar" onPress={ () => { props.onSalvar(nome, telefone, email) }}/>
+      <Button title="Salvar" onPress={ () => { 
+        props.onSalvar(nome, telefone, email);
+        setNome("");
+        setTelefone("");
+        setEmail("");
+      }}/>
     </View>
   )
 }
