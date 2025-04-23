@@ -1,8 +1,10 @@
 import { ParamListBase } from "@react-navigation/native";
-import { useState } from "react";
-import { Button, FlatList, Text, TextInput, View } from "react-native";
+import { useEffect, useState } from "react";
+import { Button, FlatList, Text, TextInput, ToastAndroid, View } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Contato } from './Contato';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -56,15 +58,39 @@ interface ContatoFormularioProps extends ParamListBase {
   interface ContatoModuloProps extends ParamListBase { 
 
   }
-  
+
   const ContatoModulo = (props : ContatoModuloProps) : React.ReactElement => {
     const [lista, setLista] = useState<Contato[]>([]);
 
     const gravar = ( nome : string, telefone : string, email : string) => { 
       const obj : Contato = {nome, telefone, email};
-      setLista( [ ...lista,  obj ] );
+      setLista( ( listaAntiga : Contato[] ) => {
+        const novaLista = [ ...listaAntiga, obj ];
+        const strLista = JSON.stringify( novaLista );
+        AsyncStorage.setItem("CONTATO_LISTA", strLista)
+        .then(()=>{
+          ToastAndroid.show("Contato salvo com sucesso", ToastAndroid.LONG);
+        })
+        .catch(()=>{
+          ToastAndroid.show("Erro ao salvar o contato", ToastAndroid.LONG);
+        })
+        return novaLista;
+      });
     }
 
+    useEffect(()=>{
+      AsyncStorage.getItem("CONTATO_LISTA")
+      .then(( strLista : string | null)=> {
+        if (strLista != null) { 
+          const listaNova = JSON.parse(strLista);
+          setLista( listaNova );
+          ToastAndroid.show(`Foram lidos ${listaNova.length} contatos do Banco de dados`, ToastAndroid.LONG);
+        }
+      })
+      .catch(()=>{
+        ToastAndroid.show("Erro ao carregar a lista de contatos", ToastAndroid.LONG);
+      });
+    }, [])
     
     return (
       <View style={{flex: 1}}>

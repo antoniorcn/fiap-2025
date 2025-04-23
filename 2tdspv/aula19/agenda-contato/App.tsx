@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { NavigationContainer, ParamListBase } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import React, { useState } from 'react';
+import React from 'react';
 import { ContatoModulo } from './ContatoScreen';
 import { CicloSocialModulo } from './CicloSocialScreen';
-import { Contato } from './Contato';
 
 const {Screen, Navigator} = createDrawerNavigator();
 
