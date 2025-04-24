@@ -1,11 +1,12 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { NavigationContainer, ParamListRoute } from '@react-navigation/native';
 import { createDrawerNavigator }  from '@react-navigation/drawer';
 import { AntDesign, FontAwesome6 } from '@expo/vector-icons';
 import CicloSocialModulo from './CicloSocialModulo';
 import ContatoModulo from './ContatoModulo';
+import {styles} from './estilos';
 
 const {Screen, Navigator} = createDrawerNavigator()
 
@@ -33,30 +34,3 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-  },
-  contato_item : {
-    borderWidth: 1,
-    borderColor: "red",
-    borderRadius: 10,
-    backgroundColor: "lightyellow",
-    margin: 10,
-    padding: 10
-  },
-  input : { 
-    borderWidth: 1,
-    borderColor: 'red',
-    backgroundColor: 'lightcyan',
-    borderRadius: 16,
-    paddingHorizontal: 15,
-    paddingVertical: 5,
-    margin: 10,
-    alignSelf: 'stretch'
-  }
-});

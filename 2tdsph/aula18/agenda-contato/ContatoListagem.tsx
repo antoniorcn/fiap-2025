@@ -1,5 +1,6 @@
 import React from 'react';
-import { FlatList, View, Text} from 'react-native';
+import { FlatList, View, Text, Button} from 'react-native';
+import {styles} from './estilos';
 
 const ContatoItem = (props : any) : React.ReactElement => { 
   return (
@@ -15,6 +16,7 @@ const ContatoListagem = (props : any) : React.ReactElement => {
     return (
       <View>
         <Text>Contato Listagem</Text>
+        <Button title="Carregar Contatos" onPress={props.onCarregar}/>
         <FlatList data={props.lista} renderItem={ContatoItem}/>
       </View>
     )

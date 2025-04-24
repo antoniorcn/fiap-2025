@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, View, Text, TextInput} from 'react-native';
+import {styles} from './estilos';
 
 const ContatoFormulario = (props : any) : React.ReactElement => {
     const [nome, setNome] = useState<string>("");
