@@ -1,103 +1,13 @@
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { Button, FlatList, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer, ParamListRoute } from '@react-navigation/native';
 import { createDrawerNavigator }  from '@react-navigation/drawer';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { FontAwesome5, Feather, AntDesign, FontAwesome6 } from '@expo/vector-icons';
-import { useState } from 'react';
+import { AntDesign, FontAwesome6 } from '@expo/vector-icons';
+import CicloSocialModulo from './CicloSocialModulo';
+import ContatoModulo from './ContatoModulo';
 
 const {Screen, Navigator} = createDrawerNavigator()
-
-const Tab = createBottomTabNavigator();
-
-interface Contato { 
-  id : number
-  nome : string
-  telefone : string
-  email : string
-}
-
-const ContatoFormulario = (props : any) : React.ReactElement => {
-  const [nome, setNome] = useState<string>("");
-  const [telefone, setTelefone] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  return (
-    <View>
-      <Text>Contato Formulario</Text>
-      <TextInput style={styles.input} placeholder="Nome Completo:"
-        value={nome} onChangeText={setNome}/>
-      <TextInput style={styles.input} placeholder="Telefone:"
-        value={telefone} onChangeText={setTelefone}/>
-      <TextInput style={styles.input} placeholder="Email:"
-        value={email} onChangeText={setEmail}/>
-      <Button title="Gravar" onPress={()=>{
-        props.onGravar(nome, telefone, email);
-      }}/>
-    </View>
-  )
-}
-
-const ContatoItem = (props : any) : React.ReactElement => { 
-  return (
-    <View style={styles.contato_item}>
-      <Text>{props.item.nome}</Text>
-      <Text>{props.item.telefone}</Text>
-      <Text>{props.item.email}</Text>
-    </View>
-  )
-}
-
-const ContatoListagem = (props : any) : React.ReactElement => { 
-  return (
-    <View>
-      <Text>Contato Listagem</Text>
-      <FlatList data={props.lista} renderItem={ContatoItem}/>
-    </View>
-  )
-}
-
-
-const Contatos = (props : any) : React.ReactElement => {
-  const [lista, setLista] = useState<Contato[]>([]);
-  const gravar = (nome :string, telefone : string, email : string) => { 
-    setLista( [ ...lista, {id: 0, nome, telefone, email} ] )
-  }
-  return ( 
-    <View style={{flex: 1}}>
-      <Text>Contatos</Text>
-      <Tab.Navigator screenOptions={{
-        headerShown: false
-      }}>
-        <Tab.Screen name="contato-formulario" 
-          options = {{
-            title: "Formulário",
-            tabBarIcon : ({color, size, focused})=>
-              <FontAwesome5 name="clipboard" color={color} size={size}/>,
-          }}>
-            {(navProps : any)=><ContatoFormulario {...navProps} onGravar={gravar}/>}
-        </Tab.Screen>
-        <Tab.Screen name="contato-listagem" 
-          options = {{
-            title: "Listagem",
-            tabBarIcon: ({color, size})=> 
-              <Feather name="list" color={color} size={size}/>
-          }}>
-            {( navProps : any )=><ContatoListagem  {...navProps} lista={lista}/>}
-          </Tab.Screen>
-
-      </Tab.Navigator>
-    </View>
-  )
-}
-
-const CicloSocial = (props : any) : React.ReactElement => { 
-  return ( 
-    <View>
-      <Text>Ciclo Social</Text>
-    </View>
-  )
-}
-
 
 export default function App() {
   return (
@@ -105,13 +15,13 @@ export default function App() {
       <View style={styles.container}>
         <Text>Cadastro de Amigos</Text>
         <Navigator>
-          <Screen name="contatos" component={Contatos}
+          <Screen name="contatos" component={ContatoModulo}
             options={{
               title: "Contatos",
               drawerIcon: ({size, color})=>
                 <AntDesign name="contacts" color={color} size={size}/>
             }}/>
-          <Screen name="ciclo-social" component={CicloSocial}
+          <Screen name="ciclo-social" component={CicloSocialModulo}
             options={{
               title: "Ciclo Social",
               drawerIcon: ({size, color})=>
