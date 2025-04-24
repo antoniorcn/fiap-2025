@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Alert, View, Text } from 'react-native';
 import { ParamListBase } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -21,15 +21,36 @@ const ContatoScreen = (props : ContatoScreenProps) :
     const gravar = ( contato : Contato ) => { 
         setLista( ( listaAntiga : Contato[]) => {
             const listaNova = [ ...listaAntiga, contato ];
-
             const strListaNova = JSON.stringify( listaNova );
-
-            AsyncStorage.setItem("CONTATO-LISTA", strListaNova);
+            AsyncStorage.setItem("CONTATO-LISTA", strListaNova)
+            .then(()=>{
+                Alert.alert("Contato gravado com sucesso");
+            })
+            .catch(()=>{
+                Alert.alert("Erro ao gravar o contato");
+            })
 
             return listaNova;
         } );
-        Alert.alert("Contato gravado com sucesso");
     }
+
+    const lerDados = () => { 
+        AsyncStorage.getItem("CONTATO-LISTA")
+        .then(( strLista : string | null )=>{
+            if ( strLista != null) { 
+                const listaNova = JSON.parse( strLista );
+                setLista( listaNova );
+                Alert.alert( `Foram carregados ${listaNova.length} contatos` )
+            }
+        })
+        .catch(()=>{
+            Alert.alert("Erro ao carregar os contatos da lista")
+        })
+    }
+
+    useEffect(()=>{
+        lerDados();
+    }, [])
 
     return ( 
         <View style={{flex: 1}}>
