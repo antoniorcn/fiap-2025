@@ -1,12 +1,11 @@
 Etapas do projeto
 
 Ok * Criar o componente principal com Navegação Drawer
-* Criar o componente Contato contendo Navegação por Abas
-* Criar o componente Contato Formulario
-* Criar o componente Contato Listagem
+Ok * Criar o componente Contato contendo Navegação por Abas
+Ok * Criar o componente Contato Formulario
+Ok * Criar o componente Contato Listagem
+Ok * Fazer as variaveis de estado para o Contato
 * Criar o componente CicloSocial contendo Navegação por Abas
 * Criar o componente CicloSocial Formulario
 * Criar o componente CicloSocial Listagem
-
-* Fazer as variaveis de estado para o Contato
 * Fazer as variaveis de estado para o CicloSocial

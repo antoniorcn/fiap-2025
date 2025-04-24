@@ -42,7 +42,10 @@ const ContatoScreen = (props : ContatoScreenProps) :
                        {( navProps : ParamListBase )=><ContatoFormulario {...navProps} onGravar={gravar}   />}
                 
                 </Screen>
-                <Screen name="ContatoListagem" component={ContatoListagem}/>
+                <Screen name="ContatoListagem" >
+                    {( navProps : ParamListBase )=>
+                            <ContatoListagem {...navProps} lista={lista} />}
+                </Screen>
             </Navigator>
         </View>
     );
