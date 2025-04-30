@@ -1,0 +1,31 @@
+GET https://tdspv-a8c0e-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
+
+
+###
+
+
+POST https://tdspv-a8c0e-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "nome": "Joao Silva",
+    "telefone": "(11) 1111-1111",
+    "email": "joao@teste.com"
+}
+
+
+### 
+
+DELETE https://tdspv-a8c0e-default-rtdb.firebaseio.com/contatos/-OP7vHMaRzQXKYov4iVW.json HTTP/1.1
+
+
+###
+
+PUT https://tdspv-a8c0e-default-rtdb.firebaseio.com/contatos/-OP7w4faIBuQzfaMVDKW.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "nome": "Joao Santos Silva",
+    "telefone": "(11) 1111-1111",
+    "email": "joao@teste.com"
+}
