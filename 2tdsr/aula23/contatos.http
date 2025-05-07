@@ -1,0 +1,18 @@
+GET https://tdsr-329ac-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
+
+
+### 
+
+POST https://tdsr-329ac-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "nome": "Joao Silva",
+    "telefone": "(11) 1111-1111",
+    "email": "joao@teste.com"
+}
+
+###
+
+DELETE https://tdsr-329ac-default-rtdb.firebaseio.com/contatos/-OPcIRC1LvB8wVvIsZA7.json HTTP/1.1
+
