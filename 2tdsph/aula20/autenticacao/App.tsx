@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import axios from 'axios';
+
+const API_KEY = process.env.API_KEY;
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>Api Key: {API_KEY}</Text>
       <StatusBar style="auto" />
     </View>
   );
