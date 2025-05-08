@@ -1,0 +1,1 @@
+GET https://tdsr-329ac-default-rtdb.firebaseio.com/contatos.json HTTP/1.1
