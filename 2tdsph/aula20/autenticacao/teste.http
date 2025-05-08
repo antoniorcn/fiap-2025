@@ -17,3 +17,14 @@ Content-Type: application/json
     "password": "abc123",
     "returnSecureToken": true
 }
+
+### 
+
+POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API_KEY] HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "maria@teste.com",
+    "password": "abc123",
+    "returnSecureToken": true
+}
