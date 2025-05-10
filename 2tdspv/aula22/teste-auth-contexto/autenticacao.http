@@ -1,0 +1,20 @@
+### Cadastrar usuario
+POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[API KEY] HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "email": "joao@teste.com",
+    "password": "123456",
+    "returnSecureToken" : true
+}
+
+
+### Fazer Login com Usuairo já cadastrado
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API KEY] HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "email": "joao@teste.com",
+    "password": "123456",
+    "returnSecureToken" : true
+}
