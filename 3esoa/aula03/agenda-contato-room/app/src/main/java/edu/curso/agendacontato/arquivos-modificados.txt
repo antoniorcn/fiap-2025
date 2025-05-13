@@ -1,0 +1,4 @@
+libs.versions.toml
+build.gradle.kts (projeto)
+build.gradle.kts (modulo)
+AndroidManifest.xml
