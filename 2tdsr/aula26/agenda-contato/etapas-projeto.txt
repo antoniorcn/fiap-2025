@@ -1,0 +1,17 @@
+Etapas do projeto
+
+Ok * Criar o componente principal com Navegação Drawer
+Ok * Criar o componente Contato contendo Navegação por Abas
+Ok * Criar o componente Contato Formulario
+Ok * Criar o componente Contato Listagem
+Ok * Fazer as variaveis de estado para o Contato
+Ok * Criar o componente CicloSocial contendo Navegação por Abas
+Ok * Criar o componente CicloSocial Formulario
+Ok * Criar o componente CicloSocial Listagem
+Ok * Fazer as variaveis de estado para o CicloSocial
+
+Ok * Gravar elementos do tipo Contato no AsyncStorage
+* Ler elementos do AsyncStorage para abastecer a lista quando o App é iniciado
+
+Ok * Gravar elementos do tipo CicloSocial no AsyncStorage
+* Ler elementos do AsyncStorage para abastecer a lista quando o App é iniciado
