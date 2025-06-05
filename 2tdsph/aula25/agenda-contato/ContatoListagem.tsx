@@ -9,6 +9,8 @@ const ContatoItem = (props : any) : React.ReactElement => {
       <Text>{props.item.nome}</Text>
       <Text>{props.item.telefone}</Text>
       <Text>{props.item.email}</Text>
+      <Button title="Apagar" onPress={()=>{props.onApagar(props.item)}} />
+      <Button title="Atualizar" onPress={()=>{props.onAtualizar(props.item)}} />
     </View>
   )
 }
@@ -19,7 +21,9 @@ const ContatoListagem = (props : any) : React.ReactElement => {
       <View>
         <Text>Contato Listagem</Text>
         <Button title="Carregar Contatos" onPress={valorContexto.carregar}/>
-        <FlatList data={valorContexto.lista} renderItem={ContatoItem}/>
+        <FlatList data={valorContexto.lista} 
+          renderItem={( flatProps )=>
+            <ContatoItem {...flatProps} onAtualizar={props.onAtualizar} onApagar={props.onApagar}/>}/>
       </View>
     )
 }

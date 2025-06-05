@@ -12,7 +12,7 @@ export const valorPadrao : MeuContextoInterface = {
     lista: [],
     setLista : ( lista : Contato[] ) => {},
     carregar : () => {},
-    gravar : (nome :string, telefone : string, email : string) => {}
+    gravar : () => {}
 };
 
 const MeuContexto = createContext( valorPadrao );

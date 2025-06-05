@@ -7,19 +7,32 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Contato from './Contato';
 import MeuContexto from './contexto';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
 const Tab = createBottomTabNavigator();
 
 const ContatoModulo = (props : any) : React.ReactElement => {
     const [lista, setLista] = useState<Contato[]>([]);
 
+    const [contato, setContato] = useState<Contato>({
+      id: "",
+      nome: "",
+      telefone: "",
+      email: ""
+    });
+
+    const handleContato = (nomeCampo : string, valor : string) => { 
+      const obj : Contato = { ... contato };
+      obj[nomeCampo] = valor;
+      setContato( obj );
+    }
+
     const carregar = () => { 
       axios.get("https://tdsph-ad96c-default-rtdb.firebaseio.com/contatos.json")
       .then(( info : AxiosResponse<any, any> )=>{
         if (info.data) {
           const listaTemp : Contato[] = [];
-          for (chave in info.data) { 
+          for (const chave in info.data) { 
             const obj = info.data[chave];
             obj.id = chave;
             listaTemp.push( obj );
@@ -33,21 +46,43 @@ const ContatoModulo = (props : any) : React.ReactElement => {
       })
     }
 
-    const gravar = (nome :string, telefone : string, email : string) => { 
+    const gravar = () => { 
       // setLista( [ ...lista, {id: 0, nome, telefone, email} ] )
-      const obj = {nome, telefone, email};
-      axios.post("https://tdsph-ad96c-default-rtdb.firebaseio.com/contatos.json", obj);
-      .then(( info : AxiosResponse<any, any> )=>{
-          ToastAndroid.show(`Contato gravado com sucesso`, ToastAndroid.LONG);
-        }
-      })
-      .catch(( erro )=>{
-        ToastAndroid.show("Erro ao carregar a lista", ToastAndroid.LONG);
-      })
-
-      
-
+      if (contato.id) {
+        axios.put(`https://tdsph-ad96c-default-rtdb.firebaseio.com/contatos/${contato.id}.json`, contato)
+        .then(( info : AxiosResponse<any, any> )=>{
+            ToastAndroid.show(`Contato atualizado com sucesso`, ToastAndroid.LONG);
+          })
+        .catch(( erro )=>{
+          ToastAndroid.show("Erro ao atualiza o contato", ToastAndroid.LONG);
+        });
+      } else { 
+        axios.post("https://tdsph-ad96c-default-rtdb.firebaseio.com/contatos.json", contato)
+        .then(( info : AxiosResponse<any, any> )=>{
+            ToastAndroid.show(`Contato gravado com sucesso`, ToastAndroid.LONG);
+          })
+        .catch(( erro )=>{
+          ToastAndroid.show("Erro ao gravar o contato", ToastAndroid.LONG);
+        });
+      }
     }
+
+    const apagar = ( obj ) => { 
+      const caminho = `https://tdsph-ad96c-default-rtdb.firebaseio.com/contatos/${obj.id}.json`;
+      alert("Apagando: " + caminho);
+      axios.delete(caminho)
+      .then(( info : AxiosResponse<any, any> )=>{
+          ToastAndroid.show(`Contato apagado com sucesso`, ToastAndroid.LONG);
+        })
+      .catch(( erro )=>{
+        ToastAndroid.show("Erro ao apagar o contato", ToastAndroid.LONG);
+      });
+    }   
+
+    const atualizar = ( obj ) => { 
+      setContato( obj );
+    }   
+
     return (
       <MeuContexto.Provider value={{
             lista,
@@ -66,7 +101,10 @@ const ContatoModulo = (props : any) : React.ReactElement => {
                 tabBarIcon : ({color, size, focused})=>
                   <FontAwesome5 name="clipboard" color={color} size={size}/>,
               }}>
-                {(navProps : any)=><ContatoFormulario {...navProps}/>}
+                {(navProps : any)=>
+                  <ContatoFormulario {...navProps} 
+                    contato={contato} 
+                    handleContato = {handleContato}/>}
             </Tab.Screen>
             <Tab.Screen name="contato-listagem" 
               options = {{
@@ -75,7 +113,7 @@ const ContatoModulo = (props : any) : React.ReactElement => {
                   <Feather name="list" color={color} size={size}/>
               }}>
                 {( navProps : any )=>
-                  <ContatoListagem  {...navProps}/>}
+                  <ContatoListagem  onApagar={apagar} onAtualizar={atualizar} {...navProps}/>}
               </Tab.Screen>
     
           </Tab.Navigator>

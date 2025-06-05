@@ -29,23 +29,19 @@ const MeuButton = ( props : MeuButtonProps) => {
 }
 
 const ContatoFormulario = (props : any) : React.ReactElement => {
-    const [nome, setNome] = useState<string>("");
-    const [telefone, setTelefone] = useState<string>("");
-    const [email, setEmail] = useState<string>("");
-
     const valorContexto = useContext( MeuContexto );
 
     return (
       <View>
         <Text>Contato Formulario</Text>
         <TextInput style={styles.input} placeholder="Nome Completo:"
-          value={nome} onChangeText={setNome}/>
+          value={props.contato.nome} onChangeText={(txt)=>{props.handleContato("nome", txt)}}/>
         <TextInput style={styles.input} placeholder="Telefone:"
-          value={telefone} onChangeText={setTelefone}/>
+          value={props.contato.telefone} onChangeText={(txt)=>{props.handleContato("telefone", txt)}}/>
         <TextInput style={styles.input} placeholder="Email:"
-          value={email} onChangeText={setEmail}/>
+          value={props.contato.email} onChangeText={(txt)=>{props.handleContato("email", txt)}}/>
         <MeuButton title="Gravar" onPress={()=>{
-          valorContexto.gravar(nome, telefone, email);
+          valorContexto.gravar();
         }} color="blue"/>
       </View>
     )

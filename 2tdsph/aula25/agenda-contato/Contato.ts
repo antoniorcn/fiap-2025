@@ -1,5 +1,5 @@
 interface Contato { 
-    id : number
+    id : string
     nome : string
     telefone : string
     email : string
