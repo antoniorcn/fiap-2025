@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "author": "Antonio Rodrigues",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": -454.2, "left": -160.4, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -18.9, "left": 215.4, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 167.15,
+      "left": 182.4,
+      "rotate": 90,
+      "attrs": { "value": "10000" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -233.6,
+      "left": -4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "r1:2", "esp:3V3", "gold", [ "v47.65", "h-259.75", "v-220.8" ] ],
+    [ "dht1:SDA", "r1:1", "gold", [ "v0" ] ],
+    [ "dht1:SDA", "esp:5", "green", [ "v0" ] ],
+    [ "lcd1:SDA", "esp:21", "blue", [ "h-67.2", "v125", "h192", "v134.4" ] ],
+    [ "esp:22", "lcd1:SCL", "violet", [ "h43.24", "v-124.8", "h-182.4", "v-96.3" ] ],
+    [ "lcd1:GND", "bb1:bn.10", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "bb1:bp.6", "red", [ "h0" ] ],
+    [ "dht1:GND", "bb1:bn.40", "black", [ "v28.8", "h67.2", "v-316.8", "h0.8" ] ],
+    [ "dht1:VCC", "bb1:bp.38", "red", [ "v57.6", "h76.8", "v-421.5" ] ],
+    [ "esp:3V3", "bb1:bp.1", "red", [ "h-148.61", "v-296.7" ] ],
+    [ "esp:GND.2", "bb1:bn.2", "black", [ "v-38.4", "h-206.36", "v-248.3" ] ]
+  ],
+  "dependencies": {}
+}
