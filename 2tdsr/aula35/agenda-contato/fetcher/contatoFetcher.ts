@@ -2,7 +2,8 @@ import { Contato } from '../model/contato';
 import axios from 'axios';
 
 const salvarApi = ( contato : Contato ) => {
-    axios.post("https://servidor.com/recurso/contato.json", contato)
+    console.log("fetcher: executado o gravar");
+    axios.post("https://servidor.com/recurso/contato.json", contato)    
     .then( () => {
         console.log("fetcher: Gravado com sucesso");
     } )
