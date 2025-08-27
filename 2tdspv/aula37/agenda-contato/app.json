@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "agenda-contato2",
-    "slug": "agenda-contato2",
+    "name": "agenda-contato",
+    "slug": "agenda-contato",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
