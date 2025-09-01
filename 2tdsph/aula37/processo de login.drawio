@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" version="28.1.2">
+  <diagram name="Página-1" id="zb9RMzV8vCp218RhMX8Y">
+    <mxGraphModel dx="883" dy="425" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-1" value="Front end - Mobile" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.mobile;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="100" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-2" value="Backend Server" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="610" y="225" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-3" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="255" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="35" y="205" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-5" value="Usuario" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-6" value="Senha" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-7" value="Login" style="labelPosition=center;verticalLabelPosition=middle;align=center;html=1;shape=mxgraph.basic.shaded_button;dx=4.52;fillColor=#E6E6E6;strokeColor=none;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="300" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-8" value="Pedido de Autenticação: HTTP Request POST&amp;nbsp;&lt;div&gt;{&quot;usuario&quot;: &quot;joao&quot;, &quot;senha&quot;: &quot;123456&quot;},&lt;/div&gt;&lt;div&gt;apiKey: &quot;sdkfhkkwqlekrhqk3h21k34hkj234&quot;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=1.022;exitY=0.156;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-1" target="A1jeh3mbRC1F-0oSoQOF-2">
+          <mxGeometry x="-0.2601" y="48" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="250" y="220" as="sourcePoint" />
+            <mxPoint x="300" y="170" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-9" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="850" y="225" width="90" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-10" value="Select from usuarios&amp;nbsp;&lt;div&gt;where user.name == usuario&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-2" target="A1jeh3mbRC1F-0oSoQOF-9">
+          <mxGeometry x="-0.1207" y="25" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="695" y="268" as="sourcePoint" />
+            <mxPoint x="855" y="268" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-11" value="Dados do usuario&lt;div&gt;name = &quot;joao&quot;&lt;/div&gt;&lt;div&gt;password = &quot;&lt;span style=&quot;background-color: rgb(236, 236, 236); font-size: 12px; text-wrap-mode: wrap; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;aaSzx2344!-&quot;&lt;/span&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=0;exitDy=52.5;exitPerimeter=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-9" target="A1jeh3mbRC1F-0oSoQOF-2">
+          <mxGeometry x="-0.1021" y="39" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="220" as="sourcePoint" />
+            <mxPoint x="620" y="170" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-13" value="Senha no banco deve estar digerida&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;aaSzx2344!-&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="245" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-14" value="Chave: ABC123" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="195" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-15" value="HTTP Response 200&lt;div&gt;{&quot;result&quot;: &quot;ok&quot;, &quot;usuario&quot;: &quot;joao&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;nome&quot;: &quot;joao silva&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;perfil&quot;: &quot;gerente&quot;,&lt;/div&gt;&lt;div&gt;&quot;token&quot;: &quot;h23kj5h1kjhkj23hk423&quot;}&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.017;entryY=0.229;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-2" target="A1jeh3mbRC1F-0oSoQOF-1">
+          <mxGeometry x="0.5674" y="47" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="210" as="sourcePoint" />
+            <mxPoint x="888" y="286" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-16" value="Pedido: HTTP Request POST /contato&lt;div&gt;{&quot;nome&quot;: &quot;Maria Silva&quot;, &quot;telefone&quot;: &quot;1234&quot;, &quot;email&quot;: &quot;maria@teste.com&quot;},&lt;/div&gt;&lt;div&gt;&quot;token&quot;:&amp;nbsp;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot;h23kj5h1kjhkj23hk423&quot;&lt;/span&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=1.033;exitY=0.688;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.582;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-1" target="A1jeh3mbRC1F-0oSoQOF-2">
+          <mxGeometry x="0.0111" y="-27" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="170" as="sourcePoint" />
+            <mxPoint x="658" y="246" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="A1jeh3mbRC1F-0oSoQOF-17" value="Resposta: HTTP Response POST /contato&lt;div&gt;&quot;contato cadastrado com sucesso&quot;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=0.984;entryY=0.946;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="A1jeh3mbRC1F-0oSoQOF-2" target="A1jeh3mbRC1F-0oSoQOF-1">
+          <mxGeometry x="-0.0389" y="46" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="297" as="sourcePoint" />
+            <mxPoint x="240" y="360" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
