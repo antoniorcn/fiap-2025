@@ -22,7 +22,6 @@ const LoginView = () => {
                 <Text style={{color: "red"}}>{usuarioErro.senha} </Text>
                 <TextInput value={usuario.senha} secureTextEntry={true}
                     onChangeText={(txt : string)=>handleInput(txt, "senha")}/>
-                <Text>Telefone: </Text>
                 <Button title="Salvar" onPress={logar}/>
             </View>
             <Modal style={{flex: 1}} visible={loading}>

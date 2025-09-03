@@ -20,8 +20,9 @@ const usuarioApiLogin = (usuario : Usuario, callback : LoginCallback) => {
         const token = resposta.data.idToken;
         callback(true, "", token);
     })
-    .catch((erro : string)=>{
-        callback(false, erro);
+    .catch((error : any)=>{
+        console.log(error);
+        callback(false, "Usuario ou senha invalidos");
     })
 }
 

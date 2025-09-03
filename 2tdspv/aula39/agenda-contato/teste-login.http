@@ -1,10 +1,10 @@
 
 # SignIn com email e senha
-POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyArf7HMxBJNPt7t6ZVBQhqNOP6ytY8pRlo HTTP/1.1
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key= HTTP/1.1
 Content-Type: application/json
 
 {
-    "email": "joao@teste.com",
+    "email": "teste@teste.com",
     "password": "123456",
     "returnSecureToken": true
 }
@@ -12,7 +12,7 @@ Content-Type: application/json
 ###
 
 # SignUp com email e senha
-POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyArf7HMxBJNPt7t6ZVBQhqNOP6ytY8pRlo HTTP/1.1
+POST https://identitytoolkit.googleapis.com/v1/accounts:signUp?key= HTTP/1.1
 Content-Type: application/json
 
 {

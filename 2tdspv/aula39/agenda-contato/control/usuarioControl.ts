@@ -27,6 +27,8 @@ const useUsuarioControl = () => {
         if (success) { 
             if (token != null) { 
                 setToken( token );
+                setMensagem("Autenticado com sucesso");
+                console.log("Autenticado Token ==> ", token);
             }
         } else { 
             setMensagem( erro );
@@ -36,7 +38,9 @@ const useUsuarioControl = () => {
         setLoading(false);
     }
 
-    const logar = () => { 
+    const logar = () => {
+        setLoading(true);
+        setUsuarioErro({});
         usuarioLogin(usuario, loginCallback);
     }
 
