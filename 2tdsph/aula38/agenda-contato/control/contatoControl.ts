@@ -3,7 +3,7 @@ import { Contato, ContatoErro } from "../model/Contato";
 import { contatoServicoApagar, contatoServicoAtualizar, contatoServicoLer, contatoServicoSalvar } from "../service/contatoService";
 import { ApagarCallback, AtualizarCallback, LerCallback, SalvarCallback } from "../fetcher/contatoFetcher";
 import { useNavigation } from "@react-navigation/native";
-import { ContatoScreenNavigationProp } from "../navigation/navigationParams";
+import { ContatoScreenNavigationProp, RootScreenNavigationProp } from "../navigation/navigationParams";
 
 interface ContatoControlHook { 
     salvar : () => {};
@@ -21,14 +21,14 @@ const useContatoControl = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [sucesso, setSucesso] = useState<boolean>(false);
 
-    const navigation = useNavigation<ContatoScreenNavigationProp>();
+    const navigation = useNavigation<RootScreenNavigationProp>();
 
     const salvarCallback : SalvarCallback = 
         (success : boolean, msg : string, errosCampos? : ContatoErro) => {
         if (success) { 
             setMensagem("Contato gravado com sucesso");
             ler();
-            navigation.navigate("ContatoLista");
+            navigation.navigate("Contato", {screen: "ContatoLista"});
         } else { 
             setMensagem(msg);
             setContatoErro( errosCampos??{} );
@@ -42,7 +42,7 @@ const useContatoControl = () => {
         if (success) { 
             setMensagem("Contato atualizado com sucesso");
             ler();
-            navigation.navigate("ContatoLista");
+            navigation.navigate("Contato", {screen: "ContatoLista"});
         } else { 
             setMensagem(msg);
             setContatoErro( errosCampos??{} );
@@ -83,6 +83,7 @@ const useContatoControl = () => {
         } else { 
             contatoServicoAtualizar( contato.id, contato, atualizarCallback );
         }
+        navigation.navigate("Contato", {screen: "ContatoLista"});
     }
 
     const ler = () => { 
