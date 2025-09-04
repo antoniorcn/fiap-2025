@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0" version="28.1.2">
+  <diagram name="Página-1" id="eamvmy1K_YBRSknWf5sb">
+    <mxGraphModel dx="1507" dy="725" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry y="140" width="170" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-2" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mobile_client;fillColor=#D2D3D3;gradientColor=none;" vertex="1" parent="EOAkrWnEZL6Q7u6oK225-6">
+          <mxGeometry width="170" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-3" value="Email" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;whiteSpace=wrap;strokeColor=#666666;mainText=" vertex="1" parent="EOAkrWnEZL6Q7u6oK225-6">
+          <mxGeometry x="30" y="110" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-4" value="Senha" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.text.textBox;fontColor=#666666;align=left;fontSize=17;spacingLeft=4;spacingTop=-3;whiteSpace=wrap;strokeColor=#666666;mainText=" vertex="1" parent="EOAkrWnEZL6Q7u6oK225-6">
+          <mxGeometry x="30" y="165" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-5" value="Login" style="labelPosition=center;verticalLabelPosition=middle;align=center;html=1;shape=mxgraph.basic.shaded_button;dx=3;fillColor=#E6E6E6;strokeColor=none;whiteSpace=wrap;" vertex="1" parent="EOAkrWnEZL6Q7u6oK225-6">
+          <mxGeometry x="35" y="230" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-7" value="Firebase" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="120" width="370" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-9" value="HTTP Request&amp;nbsp;&lt;div&gt;APIKEY = kj3h45a6a5sd76ad765asd76as7d&lt;br&gt;&lt;div&gt;{ &quot;email&quot; : &quot;joao@teste.com&quot;,&amp;nbsp;&lt;/div&gt;&lt;div&gt;&quot;senha&quot;: &quot;123456&quot; }&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.283;entryY=0.174;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-2" target="EOAkrWnEZL6Q7u6oK225-7">
+          <mxGeometry x="-0.0127" y="33" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="350" as="sourcePoint" />
+            <mxPoint x="460" y="300" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.075;exitY=0.475;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-7" target="EOAkrWnEZL6Q7u6oK225-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="340" as="sourcePoint" />
+            <mxPoint x="470" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-11" value="HTTP Response&lt;div&gt;{ &quot;idToken&quot; : &quot;sd989saf98f9asd98f...9sdaf8as9f98safd&quot;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;}&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="EOAkrWnEZL6Q7u6oK225-10">
+          <mxGeometry x="-0.1276" y="1" relative="1" as="geometry">
+            <mxPoint x="18" y="17" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-12" value="Backend&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="770" y="430" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-13" value="HTTP Request&amp;nbsp;&lt;div&gt;idToken = asdadkjashdk2k3h4kj2h4k234&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=0.036;entryY=0.379;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-2" target="EOAkrWnEZL6Q7u6oK225-12">
+          <mxGeometry x="-0.0127" y="33" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="245" as="sourcePoint" />
+            <mxPoint x="1195" y="180" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.446;entryY=0.95;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-12" target="EOAkrWnEZL6Q7u6oK225-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="390" as="sourcePoint" />
+            <mxPoint x="510" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.591;exitY=0.961;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-7" target="EOAkrWnEZL6Q7u6oK225-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="773" y="633" as="sourcePoint" />
+            <mxPoint x="770" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EOAkrWnEZL6Q7u6oK225-16" value="HTTP Response&lt;div&gt;Contato cadastrado com sucesso&lt;/div&gt;" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="EOAkrWnEZL6Q7u6oK225-12" target="EOAkrWnEZL6Q7u6oK225-2">
+          <mxGeometry x="-0.0127" y="33" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="430" as="sourcePoint" />
+            <mxPoint x="1208" y="560" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

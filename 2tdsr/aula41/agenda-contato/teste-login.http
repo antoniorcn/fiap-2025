@@ -1,0 +1,10 @@
+### Firebase Sigin with Email and Password
+
+POST https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyBv9XsJk9y3AeawnvqKY4qqxFB7XbUrkQc HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "email": "teste@teste.com",
+    "password": "123456",
+    "returnSecureToken": true
+}
