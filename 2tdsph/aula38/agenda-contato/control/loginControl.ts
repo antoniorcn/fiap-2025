@@ -3,8 +3,12 @@ import { Usuario, UsuarioErro } from '../model/Usuario';
 import { LogarCallback } from '../fetcher/loginFetcher';
 import { loginServicoLogar } from '../service/loginService';
 import { ContextoPrincipal } from '../contexto/contextoPrincipal';
+import { useNavigation } from '@react-navigation/native';
+import { RootScreenNavigationProp } from '../navigation/navigationParams';
 
 const useLoginControl = () => {
+
+    const navigation = useNavigation<RootScreenNavigationProp>();
     const {token, setToken} = useContext(ContextoPrincipal);
     // const [token, setToken] = useState<string>("");
 
@@ -32,6 +36,7 @@ const useLoginControl = () => {
                 if (success && token != undefined) { 
                     setToken(token);
                     setMensagem("Usuario logado com sucesso");
+                    navigation.navigate("Contato");
                 } else { 
                     console.log( msg );
                     setMensagem("Erro ao fazer o login");

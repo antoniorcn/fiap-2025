@@ -20,7 +20,7 @@ const ContatoView: FC<ContatoViewProps> = ( props ) => {
             <Text style={{color: sucesso ? "green" : "red", 
                 fontSize: 24}}>{mensagem}</Text>
             <Navigator>
-                <Screen name="Formulario">
+                <Screen name="ContatoFormulario">
                     { ()=> { return (
                     <View style={{flex: 1}}>
                         <Text>Nome: </Text>
@@ -39,7 +39,7 @@ const ContatoView: FC<ContatoViewProps> = ( props ) => {
                     </View>
                     )}}
                 </Screen>
-                <Screen name="Listagem">
+                <Screen name="ContatoLista">
                     {()=>{return (
                         <View style={{flex: 1}}>
                             <Button title="Ler Contatos" onPress={ler}/>

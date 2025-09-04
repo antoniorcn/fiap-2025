@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Contato, ContatoErro } from "../model/Contato";
 import { contatoServicoApagar, contatoServicoAtualizar, contatoServicoLer, contatoServicoSalvar } from "../service/contatoService";
 import { ApagarCallback, AtualizarCallback, LerCallback, SalvarCallback } from "../fetcher/contatoFetcher";
+import { useNavigation } from "@react-navigation/native";
+import { ContatoScreenNavigationProp } from "../navigation/navigationParams";
 
 interface ContatoControlHook { 
     salvar : () => {};
@@ -19,10 +21,14 @@ const useContatoControl = () => {
     const [loading, setLoading] = useState<boolean>(false);
     const [sucesso, setSucesso] = useState<boolean>(false);
 
+    const navigation = useNavigation<ContatoScreenNavigationProp>();
+
     const salvarCallback : SalvarCallback = 
         (success : boolean, msg : string, errosCampos? : ContatoErro) => {
         if (success) { 
             setMensagem("Contato gravado com sucesso");
+            ler();
+            navigation.navigate("ContatoLista");
         } else { 
             setMensagem(msg);
             setContatoErro( errosCampos??{} );
@@ -35,6 +41,8 @@ const useContatoControl = () => {
         (success : boolean, msg : string, errosCampos? : ContatoErro) => {
         if (success) { 
             setMensagem("Contato atualizado com sucesso");
+            ler();
+            navigation.navigate("ContatoLista");
         } else { 
             setMensagem(msg);
             setContatoErro( errosCampos??{} );
@@ -95,7 +103,8 @@ const useContatoControl = () => {
             (c : Contato)=> c.id == id
         );
         if (contatosFiltrados.length > 0) { 
-            setContato( contatosFiltrados[0] )
+            setContato( contatosFiltrados[0] );
+            navigation.navigate("Contato", { screen: "ContatoFormulario"});
         }
     }    
 
