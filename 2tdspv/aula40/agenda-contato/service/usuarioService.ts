@@ -1,0 +1,23 @@
+import { ValidationError } from "yup";
+import { LoginCallback, usuarioApiLogin } from "../fetcher/usuarioFetcher";
+import { Usuario, usuarioSchema, UsuarioErros } from "../model/usuario";
+
+const usuarioLogin = (usuario : Usuario, 
+    callback : LoginCallback) => {
+    
+    usuarioSchema.validate( usuario, {abortEarly : false} )
+    .then(()=>{
+        usuarioApiLogin( usuario, callback );
+    })
+    .catch(( erros : ValidationError )=>{
+        const objErroCampos : UsuarioErros = {};
+        erros.inner.forEach( ( err : ValidationError ) => { 
+            const nomeCampo = err.path;
+            const erroCampo = err.message;
+            objErroCampos[nomeCampo as keyof typeof objErroCampos] = erroCampo;
+        })
+        callback( false, erros.message, undefined, objErroCampos );
+    })
+}
+
+export { usuarioLogin };
