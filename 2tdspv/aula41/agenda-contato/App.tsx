@@ -7,13 +7,15 @@ import { useState } from 'react';
 import { RootStack } from './navigation/navigationDefinition';
 import { MainContext } from './contexto/contextoPrincipal';
 import RegistroView from './view/RegistroView';
+import { useAppControl } from './control/appControl';
 
 const {Navigator, Screen} = RootStack;
 
 export default function App() {
-  const [token, setToken] = useState<string | null>( null );
+  const {token, setToken, email, setEmail, abrirSessao, fecharSessao} = useAppControl();
+
   return (
-    <MainContext.Provider value={{token, setToken}}>
+    <MainContext.Provider value={{token, setToken, email, setEmail, abrirSessao, fecharSessao}}>
     <NavigationContainer>
       <View style={styles.container}>
         <Text>Meu App</Text>

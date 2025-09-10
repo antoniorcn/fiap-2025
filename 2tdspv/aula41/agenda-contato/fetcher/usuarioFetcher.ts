@@ -26,5 +26,21 @@ const usuarioApiLogin = (usuario : Usuario, callback : LoginCallback) => {
     })
 }
 
-export { LoginCallback, usuarioApiLogin };
+const usuarioApiRegistrar = (usuario : Usuario, callback : LoginCallback) => {
+    const objRequest = { email: usuario.email, password: usuario.senha, 
+        returnSecureToken : true };
+    apiLogin.post(`/accounts:signUp?key=${apiKey}`, objRequest)
+    .then((resposta : AxiosResponse<any, any>)=>{
+        const token = resposta.data.idToken;
+        callback(true, "", token);
+    })
+    .catch((error : any)=>{
+        console.log("Message: ", error.message);
+        console.log("Response: ", error.response);
+        console.log("Response Status: ", error.response.status);
+        callback(false, "Usuario ou senha invalidos");
+    })
+}
+
+export { LoginCallback, usuarioApiLogin, usuarioApiRegistrar};
 

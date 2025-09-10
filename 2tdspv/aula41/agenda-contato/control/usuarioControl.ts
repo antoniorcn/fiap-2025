@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { Usuario, UsuarioErros } from "../model/usuario";
 import { LoginCallback } from "../fetcher/usuarioFetcher";
-import { usuarioLogin } from "../service/usuarioService";
+import { usuarioLogin, usuarioRegistrar } from "../service/usuarioService";
 import { useNavigation } from "@react-navigation/native";
 import { RootScreenNavigationProps } from "../navigation/navigationDefinition";
-import { ContextoPrincipal } from "../contexto/contextoPrincipal";
+import { MainContext } from "../contexto/contextoPrincipal";
 
 const usuarioLimpo : Usuario = {email: "", senha: ""}
 
@@ -12,7 +12,7 @@ const usuarioLimpo : Usuario = {email: "", senha: ""}
 //         token : string | null, 
 //         setToken : ( novoToken : string | null ) => void ) => {
 const useUsuarioControl = ( ) => {
-    const {token, setToken} = useContext(ContextoPrincipal);
+    const {token, setToken} = useContext(MainContext);
 
     const navigation = useNavigation<RootScreenNavigationProps>();
 
@@ -63,8 +63,15 @@ const useUsuarioControl = ( ) => {
         navigation.navigate("Login");
     }
 
+    const registrar = () => { 
+        setLoading(true);
+        setUsuarioErro({});
+        usuarioRegistrar(usuario, loginCallback);
+    }
+
     return { usuario, usuarioErro,
         loading, mensagem, sucesso,
+        navegarRegistro, navegarLogin, registrar,
         handleInput, logar }
 }
 

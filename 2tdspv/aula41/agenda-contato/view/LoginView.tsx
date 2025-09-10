@@ -6,7 +6,7 @@ interface LoginProps {
 
 const LoginView  : React.FC<LoginProps> = ( props ) => { 
     const {usuario, usuarioErro,
-        handleInput, logar,
+        handleInput, logar, navegarRegistro,
         sucesso, loading, mensagem } = useUsuarioControl();
 
     return (

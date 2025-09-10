@@ -6,7 +6,7 @@ interface RegistroProps {
 
 const RegistroView : React.FC<RegistroProps> = ( props ) => { 
     const {usuario, usuarioErro,
-        handleInput, logar,
+        handleInput, logar, navegarLogin, registrar,
         sucesso, loading, mensagem } = useUsuarioControl();
 
     return (

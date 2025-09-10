@@ -1,11 +1,14 @@
 import {View, Text, TextInput, Button, 
-    ActivityIndicator, Modal, useWindowDimensions,
+    ActivityIndicator, Modal,
     ListRenderItemInfo,
     FlatList} from 'react-native';
 import {useContatoControl} from '../control/contatoControl';
 import { Contato } from '../model/contato';
 import { FontAwesome5 as Icon} from '@expo/vector-icons';
-import { ContatoStack } from '../navigation/navigationDefinition';
+import { ContatoStack, RootScreenNavigationProps } from '../navigation/navigationDefinition';
+import { useContext } from 'react';
+import { MainContext } from '../contexto/contextoPrincipal';
+import { useNavigation } from '@react-navigation/native';
 
 const {Screen, Navigator} = ContatoStack;
 
@@ -13,7 +16,8 @@ const ContatoView = () => {
     const {contato, contatoLista, contatoErro,
         handleInput, salvar, carregar, apagar, atualizar,
         sucesso, loading, mensagem } = useContatoControl();
-    const {fontScale, width, height} = useWindowDimensions();
+    const {fecharSessao} = useContext(MainContext);
+    const navigation = useNavigation<RootScreenNavigationProps>();
     return (
         <View style={{flex: 1}}>
             <View>
