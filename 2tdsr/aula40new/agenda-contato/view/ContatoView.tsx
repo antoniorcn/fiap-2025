@@ -7,10 +7,17 @@ import { FontAwesome6 as Icon } from '@expo/vector-icons';
 
 const {Screen, Navigator} = createBottomTabNavigator();
 
+<<<<<<< HEAD
 interface ContatoViewProps { }
 
 const ContatoView : React.FC<any> = ( 
     props : any ) => { 
+=======
+interface ContatoViewProps { 
+}
+
+const ContatoView : React.FC<ContatoViewProps> = ( props ) => { 
+>>>>>>> b7e4730 (2tdsr aula 40)
          
     const navigation = useNavigation();
     const { loading, contato, contatoLista, 
