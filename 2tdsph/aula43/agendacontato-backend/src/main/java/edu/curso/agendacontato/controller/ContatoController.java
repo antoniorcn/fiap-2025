@@ -8,11 +8,9 @@ import org.springframework.http.ResponseEntity;
 
 import edu.curso.agendacontato.model.Contato;
 import edu.curso.agendacontato.repository.ContatoRepository;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/contato")
-@CrossOrigin(origins="*")
 public class ContatoController { 
 
     private ContatoRepository repositorio;

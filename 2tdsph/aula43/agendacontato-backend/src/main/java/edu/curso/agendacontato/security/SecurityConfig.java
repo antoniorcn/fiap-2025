@@ -2,8 +2,8 @@ package edu.curso.agendacontato.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -88,12 +88,6 @@ public class SecurityConfig {
         return http.build();
     }
 
-
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception { 
-        return config.getAuthenticationManager();
-    }
-
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cors = new CorsConfiguration();
@@ -102,7 +96,12 @@ public class SecurityConfig {
         // Se for usar credenciais (cookies/autenticação com sessão), NÃO use "*".
         // Liste explicitamente as origens do seu app (web, emulator, device, etc.)
         cors.setAllowedOriginPatterns(List.of(
-                "http://localhost:8081"
+                "http://localhost:8081",
+                "http://127.0.0.1:8081",
+                // emulador Android (host da máquina visto de dentro do emulador)
+                "http://10.0.2.2:8081",
+                // dispositivo físico na mesma rede (ex.: IP do seu PC/servidor)
+                "http://192.168.0.0/16" // pode optar por listar IPs específicos
         ));
 
         cors.setAllowedMethods(List.of("GET","POST","PUT","PATCH","DELETE","OPTIONS"));
@@ -127,6 +126,12 @@ public class SecurityConfig {
         // Aplique às suas rotas (pode restringir se quiser)
         source.registerCorsConfiguration("/**", cors);
         return source;
+    }
+
+
+    @Bean
+    public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception { 
+        return config.getAuthenticationManager();
     }
     
 }

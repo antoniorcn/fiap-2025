@@ -13,11 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import edu.curso.agendacontato.model.Usuario;
 import edu.curso.agendacontato.security.JwtServices;
-import org.springframework.web.bind.annotation.CrossOrigin;
 
 @RestController
 @RequestMapping("/login")
-@CrossOrigin(origins="*")
 public class LoginController { 
 
     private JwtServices jwtServices;

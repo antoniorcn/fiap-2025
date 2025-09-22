@@ -9,16 +9,18 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Usuario {
+public class Contato {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(length = 50)
-    private String email;
+    private String nome;
 
-    @Column(length = 250)
-    private String senha;
+    @Column(length = 20)
+    private String telefone;
     
+    @Column(length = 50)
+    private String email;
 }
