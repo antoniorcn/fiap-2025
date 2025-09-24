@@ -1,0 +1,25 @@
+POST http://localhost:8080/contato HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Joao Silva",
+    "telefone": "(11) 1111-1111",
+    "email": "joao@teste.com"
+}
+
+
+###
+
+POST http://localhost:8080/contato HTTP/1.1
+Content-Type: application/json
+
+{
+    "nome": "Maria Silva",
+    "telefone": "(11) 2222-2222",
+    "email": "maria@teste.com"
+}
+
+###
+
+GET http://localhost:8080/contato HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NTg2Nzc3NDIsImV4cCI6MTc1ODY3ODA0Mn0.NqnFZUpUiBnqFmh7avqqlqrdXWSGpmb5c_MmM0V9a0A
