@@ -1,0 +1,11 @@
+####
+POST http://localhost:8080/images
+Content-Type: multipart/form-data
+
+imageInfo=
+{
+    "nome":"Foto do cachorro",
+    "descricao":"Imagem fofa",
+    "tipo":"jpg"
+};type=application/json
+image=@D:/AntonioMAD/puppy.jpg;type=image/jpeg
