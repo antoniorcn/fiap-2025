@@ -1,4 +1,4 @@
-####
+####  Nao esta funcionando, fazer via CURL conforme abaixo:
 POST http://localhost:8080/images
 Content-Type: multipart/form-data
 
@@ -9,3 +9,6 @@ imageInfo=
     "tipo":"jpg"
 };type=application/json
 image=@D:/AntonioMAD/puppy.jpg;type=image/jpeg
+
+
+####  curl -X POST http://localhost:8080/images -H "Content-Type: multipart/form-data" -F "imageInfo={\"nome\":\"Foto do cachorro\",\"descricao\":\"Imagem fofa\",\"tipo\":\"jpg\"};type=application/json" -F "image=@D:/AntonioMAD/puppy.jpg;type=image/jpeg"
