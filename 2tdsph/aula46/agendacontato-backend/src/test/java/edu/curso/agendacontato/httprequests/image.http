@@ -12,3 +12,4 @@ image=@D:/AntonioMAD/puppy.jpg;type=image/jpeg
 
 
 ####  curl -X POST http://localhost:8080/images -H "Content-Type: multipart/form-data" -F "imageInfo={\"nome\":\"Foto do cachorro\",\"descricao\":\"Imagem fofa\",\"tipo\":\"jpg\"};type=application/json" -F "image=@D:/AntonioMAD/puppy.jpg;type=image/jpeg"
+
