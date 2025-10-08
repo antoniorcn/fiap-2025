@@ -24,9 +24,12 @@ const lista : Array<Contato> = [];
 const email : string = "admin@teste.com";
 const senha : string = "123456";
 
-const upload = multer({
-  dest: "./imagens",
-});
+// const upload = multer({
+//   dest: "./imagens",
+// });
+
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 
 const filtroAutenticado = (req : any, res : any, proximo : any) => {
     const auth = req.headers["authorization"];
@@ -79,25 +82,26 @@ api.get("/contato", filtroAutenticado, (request : any, response : any)=>{
 
 api.post("/imagem", upload.single("imagem"), 
     async (request : any, response : any) => { 
-        try { 
-            console.log("Body: ", request.body);
-            const body = JSON.parse(request.body["imagemInfo"]);
-            console.log("File: ", request.file);
-            const nomeImagem = randomUUID() + "." + body.tipo;
-            console.log("Nome da imagem=>", nomeImagem);
-            const destino = path.join( "./imagens", nomeImagem );
-            console.log("Destino imagem=>", destino);
-            await fs.writeFile( destino, request.file.buffer );
-            response.json({status: "sucesso", 
-                mensagem: "Imagem carregada",
-                data: body
-            });
-        } catch ( e ) { 
-            response.json({status: "error", 
-                mensagem: "Erro ao carregar a imagem",
-                data: e
-            });
-        }
+    try { 
+        console.log("Body: ", request.body);
+        const body = JSON.parse(request.body["imagemInfo"]);
+        // console.log("File: ", request.file);
+        const nomeImagem = randomUUID() + "." + body.tipo;
+        console.log("Nome da imagem=>", nomeImagem);
+        const destino = path.join( "./imagens", nomeImagem );
+        console.log("Destino imagem=>", destino);
+        await fs.writeFile( destino, request.file.buffer );
+        response.json({status: "sucesso", 
+            mensagem: "Imagem carregada",
+            data: body
+        });
+    } catch ( e : any ) { 
+        console.error(e.stack);
+        response.json({status: "error", 
+            mensagem: "Erro ao carregar a imagem",
+            data: e
+        });
+    }
 })
 
 api.get("/", (request : any, response : any)=>{
