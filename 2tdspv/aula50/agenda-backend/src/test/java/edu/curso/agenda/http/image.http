@@ -1,0 +1,8 @@
+# curl -X POST http://localhost:8080/image/upload -H "Content-Type: multipart/form-data" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NTk1NDI1MjIsImV4cCI6MTc1OTU0NDMyMn0.446i0RC4VZh7Z8DFeCkytfeZr4HV2tmcLnBWY1nrPrY" -F "imagemInfo={\"titulo\":\"Foto do cachorro\",\"tipo\":\"jpg\", \"contatoId\": 1};type=application/json" -F "imagem=@C:/Users/anton/Downloads/puppy.jpeg;type=image/jpeg"
+
+curl -X POST "http://localhost:8080/image?contato_id=1&tipo=jpg" -H "Content-Type: multipart/form-data" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NjA1Njk0NjksImV4cCI6MTc2MDU3MTI2OX0.A2zSKi95yQZxkFCWosn-MmdMtAuZ9rWQS8wgT6ZE0fM" -F "imagem=@"C:\\Users\\labsfiap\\Downloads\\joao.jpg";type=image/jpeg"
+
+curl -X GET http://localhost:8080/image/1 -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NjA1NjkyOTQsImV4cCI6MTc2MDU3MTA5NH0.oj4hFFU_R4p5rcNCLO4Jy9bHEnbpaTZpxn7EbzoAsr8"
+
+
+
