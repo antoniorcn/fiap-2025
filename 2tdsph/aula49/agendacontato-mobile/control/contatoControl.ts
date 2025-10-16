@@ -165,7 +165,7 @@ const useContatoControl = () => {
                             nomeAquivo: imagem.fileName ?? "photo.png"
                         };
                         setImagem( imagem.uri );
-                        contatoImageUpload( resposta.assets[0], imgInfo, imagemCallback );
+                        await contatoImageUpload( resposta.assets[0], imgInfo, imagemCallback );
                     }
                 }
             }
@@ -198,7 +198,7 @@ const useContatoControl = () => {
                             nomeAquivo: imagem.fileName ?? "photo.png"
                         };
                         setImagem( imagem.uri );
-                        contatoImageUpload( resposta.assets[0], imgInfo, imagemCallback );
+                        await contatoImageUpload( resposta.assets[0], imgInfo, imagemCallback );
                     }
                 }
             }

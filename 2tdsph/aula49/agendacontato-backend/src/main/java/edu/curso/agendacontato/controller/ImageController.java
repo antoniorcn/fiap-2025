@@ -44,7 +44,7 @@ public class ImageController {
 
         System.out.println("ID Gerado " + nomeArquivo);
 
-        Path base = Path.of("D:\\AntonioMAD\\images");
+        Path base = Path.of("c:\\temp\\images");
 
         try ( InputStream in = image.getInputStream()) {
             System.out.println("InputStream acessado");

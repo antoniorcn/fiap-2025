@@ -4,7 +4,7 @@ import { contatoFetcherSalvar, contatoFetcherLer, contatoFetcherApagar,
     contatoFetcherAtualizar,
     AtualizarCallback,
     ImageUploadCallback,
-    contatoFetecherImageUpload} from "../fetcher/contatoFetcher";
+    contatoFetcherImageUpload} from "../fetcher/contatoFetcher";
 import { ValidationError } from "yup";
 import { ImagePickerAsset } from "expo-image-picker";
 import { ImageInfo } from "../model/ImageInfo";
@@ -32,8 +32,8 @@ const contatoServicoApagar = (id : string, callback : ApagarCallback, token? : s
     contatoFetcherApagar(id, callback, token );
 }
 
-const contatoImageUpload = ( asset : ImagePickerAsset, imgInfo : ImageInfo, callback : ImageUploadCallback ) : void => { 
-    contatoFetecherImageUpload( asset, imgInfo, callback );
+const contatoImageUpload = async ( asset : ImagePickerAsset, imgInfo : ImageInfo, callback : ImageUploadCallback ) : Promise<void> => { 
+    await contatoFetcherImageUpload( asset, imgInfo, callback );
 }
 
 const contatoServicoAtualizar = 
