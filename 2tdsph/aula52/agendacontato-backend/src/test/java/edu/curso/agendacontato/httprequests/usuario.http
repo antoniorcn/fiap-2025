@@ -1,0 +1,22 @@
+POST http://localhost:8080/login HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "id": 0,
+    "email": "joao@teste.com",
+    "senha": "123456"
+}
+
+
+###
+
+POST http://localhost:8080/login/cadastro HTTP/1.1
+Content-Type: application/json
+
+{ 
+    "id": 0,
+    "email": "joao@teste.com",
+    "senha": "123456"
+}
+
+###Token:  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2FvQHRlc3RlLmNvbSIsImlhdCI6MTc1ODU0MzM5MiwiZXhwIjoxNzU4NTc5MzkyfQ.8XMyrj9_ap1gSLPR5x-ArDo4-yMDgtchi_uEdisjZYw
