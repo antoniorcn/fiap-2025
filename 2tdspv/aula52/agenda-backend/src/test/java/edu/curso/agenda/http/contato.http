@@ -1,0 +1,37 @@
+POST http://localhost:8080/contato HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NjA1NjkyOTQsImV4cCI6MTc2MDU3MTA5NH0.oj4hFFU_R4p5rcNCLO4Jy9bHEnbpaTZpxn7EbzoAsr8
+
+{
+    "id": 0,
+    "nome": "Joao Silva",
+    "telefone": "(11) 1111-1111",
+    "email": "joao@teste.com"
+}
+
+###
+
+POST http://localhost:8080/contato HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NjA1NjkyOTQsImV4cCI6MTc2MDU3MTA5NH0.oj4hFFU_R4p5rcNCLO4Jy9bHEnbpaTZpxn7EbzoAsr8
+
+{
+    "id": 0,
+    "nome": "Maria Silva",
+    "telefone": "(11) 2222-2222",
+    "email": "maria@teste.com"
+}
+
+### 
+
+GET http://localhost:8080/contato HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0ZS5jb20iLCJpYXQiOjE3NjA1NjkyOTQsImV4cCI6MTc2MDU3MTA5NH0.oj4hFFU_R4p5rcNCLO4Jy9bHEnbpaTZpxn7EbzoAsr8
+
+
+### 
+
+GET http://localhost:8080/contato?nome=Joao HTTP/1.1
+
+
+### 
+DELETE http://localhost:8080/contato/1 HTTP/1.1

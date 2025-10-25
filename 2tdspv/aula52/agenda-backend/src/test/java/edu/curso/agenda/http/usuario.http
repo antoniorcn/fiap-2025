@@ -1,0 +1,20 @@
+POST http://localhost:8080/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 0,
+    "email": "admin@teste.com",
+    "senha": "123456",
+    "nome": "Usuario Administrador",
+    "perfil": "ADMIN"
+}
+
+### 
+
+POST http://localhost:8080/auth/signin HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "admin@teste.com",
+    "senha": "123456"
+}
