@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "2tdspv-teste-deploy",
+    "slug": "2tdspv-teste-deploy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "com.fiap.tdspv.teste"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "14fc6065-7735-41df-8355-d9605f3759ca"
+      }
+    },
+    "plugins": [
+      "expo-dev-client"
+    ],
+    "owner": "profantonio"
+  }
+}
