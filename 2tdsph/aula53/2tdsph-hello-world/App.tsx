@@ -12,7 +12,7 @@ export default function App() {
             data: {teste: "Teste"}
           },
           trigger: {
-            seconds: 5,
+            seconds: 15,
             // repeats: false,
             // type: Notifications.SchedulableTriggerInputTypes.TIME_INTERVAL
           },
@@ -23,18 +23,27 @@ export default function App() {
           handleNotification: async() : Promise<Notifications.NotificationBehavior> => {
             return { 
               shouldPlaySound: false,
-              shouldShowList: false,
-              shouldSetBadge : false,
+              shouldShowList: true,
+              shouldSetBadge : true,
               shouldShowBanner: true
             }
         }});
+      // const notificationListener = Notifications.addNotificationReceivedListener( 
+      //   ( notification ) => { 
+      //     console.log("Notificação recebida");
+      //     ToastAndroid.show( "Notificação clicada", ToastAndroid.LONG);
+      //     console.log( notification );
+      //   }
+      // );        
       const subscription = Notifications.addNotificationResponseReceivedListener( 
         ( notification ) => { 
-          ToastAndroid.show( "Notificação cliacada", ToastAndroid.LONG);
+          ToastAndroid.show( "Notificação clicada", ToastAndroid.LONG);
           console.log( notification );
         }
       );
       return ()=> {
+        console.log("Listeners removidos da memória");
+        // notificationListener.remove();
         subscription.remove();
       }
   }, []);
