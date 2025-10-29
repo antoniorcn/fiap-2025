@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "teste-maps",
+    "slug": "teste-maps",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package":"edu.curso.2tdsr2025",
+      "config": {
+        "googleMaps": { 
+				  "apiKey": "AIzaSyBg-msvuusFX8OW0LTkg4lz2Zuv1MbMwgg"
+			  }   
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
