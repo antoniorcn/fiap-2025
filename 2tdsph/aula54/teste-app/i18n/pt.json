@@ -1,0 +1,9 @@
+{
+    "greeting": "Bem vindo a Aplicação de Teste",
+    "type_amount": "Por favor digite o valor da venda",
+    "type_quantity": "Por favor digite a quantidade de itens vendidos",
+    "report_sale": "Foram vendidos R$ {{amount}} em itens",
+    "report_quantity_other": "Foram vendidos {{count}} itens",
+    "report_quantity_one": "Foi vendido apenas {{count}} item",
+    "report_quantity_zero": "Não foi vendido nenhum item até o momento"
+}

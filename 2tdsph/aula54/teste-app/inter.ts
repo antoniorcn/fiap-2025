@@ -1,0 +1,15 @@
+import i18n from "i18next";
+import {initReactI18next} from "react-i18next";
+import { getLocales } from 'expo-localization';
+import en from "./i18n/en.json";
+import pt from "./i18n/pt.json";
+const resources = { en: {translation: en}, pt: {translation: pt} };
+const {languageTag} = getLocales()[0];
+i18n.use(initReactI18next).init({
+  compatibilityJSON: "v4",
+  lng: languageTag.startsWith("pt") ? "pt" : "en",
+  resources,
+  fallbackLng: "en",
+  interpolation: {escapeValue: false},
+});
+export default i18n;

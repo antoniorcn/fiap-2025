@@ -1,0 +1,9 @@
+{
+    "greeting": "Welcome to Test App",
+    "type_amount": "Please type a sale amount",
+    "type_quantity": "Please type the number of sold items",
+    "report_sale": "$ {{amount}} of items where sold",
+    "report_quantity_other": "{{count}} items where sold",
+    "report_quantity_one": "Just {{count}} item where sold",
+    "report_quantity_zero": "There are no items sold up to now"
+}
