@@ -1,0 +1,11 @@
+{
+    "greeting": "Welcome to my Internationalization App",
+    "type_sales_last_quarter": "Please type sales amount in last quarter",
+    "sales_amount_last_quarter": "$ {{amount}} were sold in last quarter",
+    "type_items_quantity": "Please type how many parts were sold last quarter",
+    "sales_summary_other": "{{count}} parts where sold with a average value of {{partValue}} per part",
+    "sales_summary_one": "Only {{count}} parts where sold costing {{partValue}}",
+    "sales_summary_zero": "No one parts where sold",
+    "app_launch_date": "App launch date",
+    "price": "Price"
+}

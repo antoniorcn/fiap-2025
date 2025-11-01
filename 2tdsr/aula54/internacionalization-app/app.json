@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "2tdspv-teste-deploy",
-    "slug": "2tdspv-teste-deploy",
+    "name": "internacionalization-app",
+    "slug": "internacionalization-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,25 +21,14 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false,
-      "package": "com.fiap.tdspv.teste",
-      "config" : { 
-        "googleMaps": { 
-          "apiKey": "AIzaSyDJCo1hUX4bF4fHhpzc8BHCf-xif9Whvug"
-        }
-      }
+      "predictiveBackGestureEnabled": false
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "extra": {
-      "eas": {
-        "projectId": "14fc6065-7735-41df-8355-d9605f3759ca"
-      }
-    },
     "plugins": [
-      "expo-dev-client"
-    ],
-    "owner": "profantonio"
+      "react-native-localize",
+      "expo-localization"
+    ]
   }
 }

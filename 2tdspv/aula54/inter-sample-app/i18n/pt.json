@@ -1,0 +1,12 @@
+{
+    "greeting": "Bem vindos a minha app internacionalizada",
+    "type_sales_last_quarter": "Por favor digite o valor de vendas do ultimo quartil",
+    "sales_amount_last_quarter": "Foram vendidos R$ {{amount}} no último quartil",
+    "type_items_quantity": "Por favor digite quantas peças foram vendidas no último quartil",
+    "sales_summary": "Foram vendidas {{quantity}} peças a um valor médio de {{partValue}} por peça",
+    "sales_summary_one": "Apenas {{count}} peça foi vendida, pelo valor de {{partValue}}",
+    "sales_summary_zero": "Nenhuma peça foi vendida",
+    "app_launch_date": "Data de lançamento do App",
+    "price": "Preço"
+
+}

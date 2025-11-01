@@ -1,0 +1,15 @@
+{
+
+    "greeting": "Hello Welcome to my app",
+    "credit_message": "This app was made by Antonio",
+    "credits": "Credits",
+    "enter_your_name": "Please type your name",
+    "welcome": "Welcome",
+    "welcome_message": "You are welcome, {{name}}",
+    "items": "Items",
+    "checkout": "Checkout",
+    "item_one": "{{count}} item",
+    "item_other": "{{count}} items",
+    "item_zero": "there are no items"
+
+}

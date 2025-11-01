@@ -1,0 +1,14 @@
+{
+
+    "greeting": "Olá bem vindo a minha aplicação",
+    "credit_message": "Esta aplicação foi feita pelo Antonio",
+    "credits": "Créditos",
+    "enter_your_name": "Por favor digite seu nome",
+    "welcome": "Boas vindas",
+    "welcome_message": "Seja bem vindo, {{name}}",
+    "items": "Itens",
+    "checkout": "Fechamento",
+    "item_one": "{{count}} item",
+    "item_other": "{{count}} itens",
+    "item_zero": "Não há itens"
+}

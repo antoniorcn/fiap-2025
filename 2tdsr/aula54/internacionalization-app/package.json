@@ -1,5 +1,5 @@
 {
-  "name": "2tdspv-teste-deploy",
+  "name": "internacionalization-app",
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "expo": "~54.0.20",
-    "expo-dev-client": "~6.0.16",
+    "expo-localization": "~17.0.7",
     "expo-status-bar": "~3.0.8",
+    "i18next": "^25.6.0",
     "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-i18next": "^16.2.1",
     "react-native": "0.81.5",
-    "react-native-maps": "1.20.1"
+    "react-native-localize": "^3.6.0",
+    "react-native-web": "^0.21.0"
   },
   "devDependencies": {
     "@types/react": "~19.1.0",
