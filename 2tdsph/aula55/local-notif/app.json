@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "local-notif",
+    "slug": "local-notif",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "package": "edu.curso.localnotif"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-dev-client"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "da0b4c75-3a74-4cbf-ba27-8d364f475b9c"
+      }
+    },
+    "owner": "profantonio"
+  }
+}
